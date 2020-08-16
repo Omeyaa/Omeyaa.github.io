@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+
+		.top{
+			background-image: url(images/topbg.jpg);
+			height: 200px;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+		}
+
+		.info{
+			position: absolute;
+			top: 180px;
+			left:430px;
+			text-align: center;
+			font-family: arial;
+		}
+
+			.about{
+			position: absolute;
+			top: 550px;
+			left: 400px;
+		}
+
+		.about img{
+			width: 50px;
+		}
+
+		.about li{
+			padding: 0px 15px;
+			display: inline-block;
+		}
+		.projects{
+			width: 1100px;
+			margin:10px;
+			text-align: center;
+			position: relative;
+			top: 650px;
+			left: 100px;
+
+		}
+
+		.p1{
+			width: 300px;
+			margin:10px;
+			text-align: center;
+			float: left;
+			padding: 20px;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+
+		.projects a{
+			text-decoration: none;
+			font-family: arial;
+			font-size: 20px;
+			color: black;
+		}
+
+		.footer{
+			width: 100%;
+			height: 50px;
+			background-color: black;
+			position: relative;
+			top: 1350px;
+		}
+
+		@media screen and (orientation:portrait){
+			.top{
+				width: 100%;
+			}
+
+			.info{
+				position: absolute;
+				left: 50px;
+			}
+
+			.about{
+				position: absolute;
+				top: 600px;
+				left: 40px;
+			}
+
+			.about li{
+			padding: 0px 15px;
+			display: inline-block;
+		}
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="top" id="home">
+</div>
+<div class="info">
+	<img src="images/mypic.jpg" style="border-radius: 50%;width: 250px;">
+<pre style="font-size: 40px; font-family: arial;"><b><script language="JavaScript1.2">
+var message="Romeo Dela Cruz Estoy"
+var neonbasecolor="black"
+var neontextcolor="white"
+var neontextcolor2="black"
+var flashspeed=100                                             
+var flashingletters=3  
+var flashingletters2=1 
+var flashpause=0       
+ 
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+ 
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+ 
+function neon(){
+ 
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+ 
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+ 
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+ 
+ 
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+ 
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+ 
+</script></b></pre>
+<p style="font-family: arial;font-size: 24px;position: relative;top: -30px; left: 0px;">Grade 12 Student</p>
+</div>
+
+<div class="about">
+	<ul>
+		<li><a href="https://www.facebook.com/romeo.estoy.31"><img src="images/fb.svg"></a></li>
+		<li><a href="https://www.instagram.com/omeyaaaa"><img src="images/ig.svg"></a></li>
+		<li><a href="https://www.youtube.com/channel/UCpzfmKk8Ayl6GAIGJj3Oxqg"><img src="images/yt.svg"></a></li>
+		<li><a href="https://github.com/Omeyaa"><img src="images/github.svg"></a></li>
+		<li><a href="https://twitter.com/Omeyaaaaa"><img src="images/twitter.svg"></a></li>
+	</ul>
+</div>
+
+<div class="projects">
+		<h1 style="font-size: 40px;font-family: arial;">Python Language</h1>
+		<div class="p1">
+			<img src="images/bk.jpg">
+			<a href="https://github.com/Omeyaa/BankingSystem"><p>Banking System</p></a>
+		</div>
+	
+
+	
+		<div class="p1">
+			<img src="images/bq.jpg">
+			<a href="https://github.com/Omeyaa/BinaryQuiz"><p>Binary Quiz System</p></a>
+		</div>
+	
+
+	
+		<div class="p1">
+			<img src="images/flask.jpg">
+			<a href="https://github.com/Omeyaa/Flask"><p>Web Development</p></a>
+		</div>
+	
+
+	
+		<div class="p1">
+			<img src="images/gui.jpg">
+			<a href="https://github.com/Omeyaa/ZodiacSign"><p>Graphical User Interface App</p></a>
+		</div>
+	
+
+	
+		<div class="p1">
+			<img src="images/si.jpg">
+			<a href="https://github.com/Omeyaa/StudentInfo"><p>Student Info System</p></a>
+		</div>
+	
+
+	
+		<div class="p1">
+			<img src="images/sp.jpg">
+			<a href="https://github.com/Omeyaa/StudentProfilling"><p>Student Profilling System</p></a>
+		</div>
+</div>
+<br>
+<div class="footer">
+	
+</div>
+</body>
+</html>
